@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     enhanced_scaffold (0.0.1)
-      rails (~> 3.2.22)
+      rails (~> 3.2)
 
 GEM
   remote: https://rubygems.org/
