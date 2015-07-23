@@ -1,5 +1,5 @@
-<h1>New <%= singular_table_name %></h1>
+<h1><%%= t('views.headings.new', model_name: <%= namespace %>::<%= class_name %>.model_name.human) %></h1>
 
 <%%= render 'form' %>
 
-<%%= link_to 'Back', <%= index_helper %>_path %>
+<%%= link_to t('views.actions.back'), <%= index_helper %>_path %>

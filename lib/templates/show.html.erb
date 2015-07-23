@@ -2,11 +2,11 @@
 
 <% attributes.each do |attribute| -%>
 <p>
-  <b><%= attribute.human_name %>:</b>
+  <b><%%= <%= namespace %>::<%= class_name %>.human_attribute_name(:<%= attribute.name %>) %>:</b>
   <%%= @<%= singular_table_name %>.<%= attribute.name %> %>
 </p>
 
 <% end -%>
 
-<%%= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>) %> |
-<%%= link_to 'Back', <%= index_helper %>_path %>
+<%%= link_to t('views.actions.edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>) %> |
+<%%= link_to t('views.actions.back'), <%= index_helper %>_path %>
