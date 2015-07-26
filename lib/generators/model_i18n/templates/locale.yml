@@ -1,0 +1,11 @@
+<%= locale %>:
+  activerecord:
+    models:
+      <%= "#{namespace}/#{class_name}".underscore %>:
+        one:
+        other:
+    attributes:
+      <%= "#{namespace}/#{class_name}".underscore %>:
+<% attributes.each do |attribute| -%>
+          <%= attribute.name %>:
+<% end -%>
