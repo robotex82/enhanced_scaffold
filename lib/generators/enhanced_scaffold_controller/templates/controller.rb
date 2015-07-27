@@ -49,7 +49,7 @@ class <%= controller_class_name %>Controller < ApplicationController
 
     respond_to do |format|
       if @<%= orm_instance.save %>
-        format.html { redirect_to @<%= singular_table_name %>, <%= key_value :notice, "'#{human_name} was successfully created.'" %> }
+        format.html { redirect_to @<%= singular_table_name %>, <%= key_value :notice, "I18n.t('success.messages.created', model: #{class_name}.model_name.human)" %> }
         format.json { render <%= key_value :json, "@#{singular_table_name}" %>, <%= key_value :status, ':created' %>, <%= key_value :location, "@#{singular_table_name}" %> }
       else
         format.html { render <%= key_value :action, '"new"' %> }
@@ -65,7 +65,7 @@ class <%= controller_class_name %>Controller < ApplicationController
 
     respond_to do |format|
       if @<%= orm_instance.update_attributes("params[:#{singular_table_name}]") %>
-        format.html { redirect_to @<%= singular_table_name %>, <%= key_value :notice, "'#{human_name} was successfully updated.'" %> }
+        format.html { redirect_to @<%= singular_table_name %>, <%= key_value :notice, "I18n.t('success.messages.updated', model: #{class_name}.model_name.human)" %> }
         format.json { head :no_content }
       else
         format.html { render <%= key_value :action, '"edit"' %> }
