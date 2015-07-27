@@ -1,0 +1,28 @@
+en:
+  errors:
+    messages:
+      not_saved:
+        one: '1 error prohibited this %{resource} from being saved:'
+        other: '%{count} errors prohibited this %{resource} from being saved:'
+  success:
+    messages:
+      created: '%{model} was successfully created.'
+      updated: '%{model} was successfully updated.'
+  helpers:
+    submit:
+      create: 'Create %{model}'
+      search: 'Search'
+      update: 'Update %{model}'
+  views:
+    actions:
+      back: 'Back'
+      destroy: 'Delete'
+      edit: 'Edit'
+      new: 'New %{model_name}'
+      show: 'Show'
+    confirmations:
+      destroy: 'Are you sure?'
+    headings:
+      edit: 'Edit %{model_name}'
+      index: 'List %{model_name}'
+      new: 'New %{model_name}'

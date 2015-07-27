@@ -7,7 +7,8 @@ class <%= controller_class_name %>Controller < ApplicationController
   # GET <%= route_url %>
   # GET <%= route_url %>.json
   def index
-    @<%= plural_table_name %> = <%= orm_class.paginate(class_name) %>
+    @q = <%= class_name %>.ransack(params[:q])
+    @<%= plural_table_name %> = @q.result(distinct: true).page params[:page]
 
     respond_to do |format|
       format.html # index.html.erb

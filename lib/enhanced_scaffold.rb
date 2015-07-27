@@ -1,3 +1,4 @@
+require 'enhanced_scaffold/engine'
 require 'rails/generators/active_model'
 require 'generators/model_i18n/model_i18n_generator'
 

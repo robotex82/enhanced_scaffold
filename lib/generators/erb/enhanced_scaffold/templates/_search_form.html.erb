@@ -1,0 +1,15 @@
+<%%= search_form_for q do |f| %>
+<% attributes.each do |attribute| -%>
+  <div class="control-group">
+    <%%= f.label :<%= "#{attribute.name}_cont" %>, class: 'control-label' %>
+    <div class="controls">
+      <%%= f.search_field :<%= "#{attribute.name}_cont" %> %>
+    </div>
+  </div>
+
+<% end -%>
+
+  <div class="actions">
+    <%%= f.submit t('helpers.submit.search'), class: 'btn' %>
+  </div>
+<%% end %>

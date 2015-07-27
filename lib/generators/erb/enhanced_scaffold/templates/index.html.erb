@@ -1,9 +1,11 @@
 <h1><%%= t('views.headings.index', model_name: <%= namespace %>::<%= class_name %>.model_name.human(count: :other)) %></h1>
 
+<%%= render 'search_form', q: @q %>
+
 <table class="table table-condensed table-hover table-striped">
   <tr>
 <% attributes.each do |attribute| -%>
-    <th><%%= <%= namespace %>::<%= class_name %>.human_attribute_name(:<%= attribute.name %>) %></th>
+    <th><%%= sort_link(@q, :<%= attribute.name %>, <%= namespace %>::<%= class_name %>.human_attribute_name(:<%= attribute.name %>)) %></th>
 <% end -%>
     <th></th>
     <th></th>
