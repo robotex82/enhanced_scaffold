@@ -2,5 +2,7 @@
 
 <%%= render 'form' %>
 
-<%%= link_to t('views.actions.show'), @<%= singular_table_name %> %> |
-<%%= link_to t('views.actions.back'), <%= index_helper %>_path %>
+<div class="default-actions">
+  <%%= link_to t('views.actions.show'), @<%= singular_table_name %> %> |
+  <%%= link_to t('views.actions.back'), <%= index_helper %>_path %>
+</div>
