@@ -26,3 +26,4 @@ de:
       edit: '%{model_name} bearbeiten'
       index: '%{model_name} auflisten'
       new: '%{model_name} anlegen'
+      show: '%{model_name} anzeigen'

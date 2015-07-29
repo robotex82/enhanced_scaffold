@@ -26,3 +26,4 @@ en:
       edit: 'Edit %{model_name}'
       index: 'List %{model_name}'
       new: 'New %{model_name}'
+      show: 'Show %{model_name}'
