@@ -1,10 +1,14 @@
+<h1><%= t('views.headings.show', model_name: Dzb::Corrections::Item.model_name.human(count: :other)) %></h1>
+
+<table class="table table-striped table-hover">
 <% attributes.each do |attribute| -%>
-<p>
-  <b><%%= <%= namespace %>::<%= class_name %>.human_attribute_name(:<%= attribute.name %>) %>:</b>
-  <%%= @<%= singular_table_name %>.<%= attribute.name %> %>
-</p>
+  <tr>
+    <td><span class="attribute-label <%= singular_table_name.dasherize %>-<%= attribute.name.dasherize %> %>"><%%= <%= namespace %>::<%= class_name %>.human_attribute_name(:<%= attribute.name %>) %>:</span></td>
+    <td><span class="attribute-value <%= singular_table_name.dasherize %>-<%= attribute.name.dasherize %> %>"><%%= @<%= singular_table_name %>.<%= attribute.name %> %></span></td>
+  </tr>
 
 <% end -%>
+</table>
 
 <div class="default-actions">
   <%%= link_to t('views.actions.edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>) %> |
